@@ -1,6 +1,7 @@
-import {useRef} from "react";
-import { motion,useInView } from "framer-motion";
+import { useRef } from "react";
 import "./services.scss";
+import { motion, useInView } from "framer-motion";
+
 const variants = {
   initial: {
     x: -500,
@@ -19,22 +20,20 @@ const variants = {
 };
 
 const Services = () => {
- 
   const ref = useRef();
 
   const isInView = useInView(ref, { margin: "-100px" });
 
-
-  
   return (
-    <motion.div className="services" variants={variants} 
-    initial="initial"
-    
-    ref={ref}
-    animate={isInView && "animate"}
-    // whileInView="animate"
-    
-     >
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      // animate="animate"
+      // whileInView="animate"
+      ref={ref}
+      animate={"animate"}
+    >
       <motion.div className="textContainer" variants={variants}>
         <p>
           I focus on helping your brand grow
@@ -43,57 +42,69 @@ const Services = () => {
         <hr />
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
-        <div className="tile">
+        <div className="title">
           <img src="/people.png" alt="" />
           <h1>
-          <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
           </h1>
         </div>
-        <div className="tile">
-       
+        <div className="title">
           <h1>
-            <motion.b  whileHover={{color:"orange"}}>For Your</motion.b>Business.
+            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
           <button>WHAT WE DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        <motion.div className="box" whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A suscipit
-            aut consequatur laborum ipsum molestiae perferendis maxime harum
-            error, possimus ducimus tempora odio maiores quam, quod asperiores!
-            Ad, praesentium magnam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <button>Go</button>
         </motion.div>
-        <motion.div className="box" whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A suscipit
-            aut consequatur laborum ipsum molestiae perferendis maxime harum
-            error, possimus ducimus tempora odio maiores quam, quod asperiores!
-            Ad, praesentium magnam.
-          </p>
-          <button>Go</button>
-        </motion.div> <motion.div className="box" whileHover={{background:"lightgray",color:"black"}}>
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A suscipit
-            aut consequatur laborum ipsum molestiae perferendis maxime harum
-            error, possimus ducimus tempora odio maiores quam, quod asperiores!
-            Ad, praesentium magnam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <button>Go</button>
         </motion.div>
-        <motion.div className="box" whileHover={{background:"lightgray",color:"black"}}>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
           <h2>Branding</h2>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A suscipit
-            aut consequatur laborum ipsum molestiae perferendis maxime harum
-            error, possimus ducimus tempora odio maiores quam, quod asperiores!
-            Ad, praesentium magnam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
+          </p>
+          <button>Go</button>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Branding</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
+            animi! Ad nam pariatur assumenda quae mollitia libero repellat
+            explicabo maiores?
           </p>
           <button>Go</button>
         </motion.div>
